@@ -1,6 +1,6 @@
 ---
 title: "01-2_Problem-Set"
-author: "Clay Wright"
+author: 
 date: '`r Sys.Date()`'
 output: pdf_document
 ---
