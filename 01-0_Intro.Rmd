@@ -186,11 +186,116 @@ output: html
 ---
 ```
 
-In general this works quite well. 
-
 We could also make this into a docx or slides, but slides work a little differently. I made the slides on the first day of class in Quarto, you can check them out in that project. 
 
-### Code chunk settings and global settings
+**In general this works quite well. But the YAML header is often a source of hard to track down errors. These errors can often be solved by replacing the header with the header from an RStudio template document.** 
+
+
+### Code chunk/block settings and global settings
+
+Code chunk or block settings, which set how a code block will be run or formatted is one area in which R Markdown and Quarto differ.
+
+(from <https://www.stephaniehicks.com/jhustatprogramming2023/posts/2023-10-26-build-website/>)
+
+#### R Markdown vs Quarto
+
+Some high-level differences include
+
+-   Standardized YAML across formats
+-   Decoupled from RStudio
+-   More consistent presentation across formats
+-   [Tab Panels](https://quarto.org/docs/interactive/layout.html#tabset-panel)
+-   [Code Highlighting](https://quarto.org/docs/output-formats/html-code.html#highlighting)
+
+Another noticeable difference are settings/options for code blocks. Rather than being in the header of the code block, options are **moved to within the code block** using the `#|` (hash-pipe) for each line.
+
+This is a code block for R Markdown:
+
+```` markdown
+```{{r setup, include=FALSE}}
+library(tidyverse)
+library(tidytext)
+```
+````
+
+This is a code block for Quarto:
+
+```` markdown
+``` {{r}}
+#| label: "setup"
+#| include: false
+library(tidyverse)
+library(tidytext)
+```
+````
+
+### Output Options
+
+There are a **wide variety of output options available** for customizing output from executed code.
+
+All of these options can be specified either
+
+-   **globally** (in the document front-matter) or
+-   **per code-block**
+
+For example, here's a modification of the Python example to specify that we don't want to "echo" the code into the output document:
+
+``` yaml
+---
+title: "My Document"
+execute:
+  echo: false
+jupyter: python3
+---
+```
+
+Note that we can override this option on a per code-block basis. For example:
+
+``` {{python}}
+#| echo: true
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4])
+plt.show()
+```
+
+Code block options available for customizing output include:
+
+| Option    | Description                                                                                                                                                                                       |
+|----------------|--------------------------------------------------------|
+| `eval`    | Evaluate the code chunk (if `false`, just echos the code into the output).                                                                                                                        |
+| `echo`    | Include the source code in output                                                                                                                                                                 |
+| `output`  | Include the results of executing the code in the output (`true`, `false`, or `asis` to indicate that the output is raw markdown and should not have any of Quarto's standard enclosing markdown). |
+| `warning` | Include warnings in the output.                                                                                                                                                                   |
+| `error`   | Include errors in the output (note that this implies that errors executing code will not halt processing of the document).                                                                        |
+| `include` | Catch all for preventing any output (code or results) from being included (e.g. `include: false` suppresses all output from the code block).                                                      |
+
+Here's a example with r code blocks and some of these additional options included:
+
+    ---
+    title: "Knitr Document"
+    execute:
+      echo: false
+    ---
+
+    ```{{r}}
+    #| warning: false
+
+    library(ggplot2)
+    ggplot(airquality, aes(Temp, Ozone)) + 
+      geom_point() + 
+      geom_smooth(method = "loess", se = FALSE)
+    ```
+
+    ```{{r}}
+    summary(airquality)
+    ```
+
+::: callout-tip
+When using the **Knitr engine**, you can also use any of the **available native options** (e.g. `collapse`, `tidy`, `comment`, etc.).
+
+See the [Knitr options documentation](https://yihui.org/knitr/options/) for additional details. You can include these native options in option comment blocks as shown above, or on the same line as the `{r}` as shown in the Knitr documentation.
+:::
 
 
 

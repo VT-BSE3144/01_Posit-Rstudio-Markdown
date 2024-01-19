@@ -1,8 +1,8 @@
 ---
 title: "01-2_Problem-Set"
-author: 
+author: "Clay Wright"
 date: '`r Sys.Date()`'
-output: pdf
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -40,3 +40,15 @@ What do you think is cool about this website? What do you like about how it is f
 (Adapted from <https://r4ds.hadley.nz/quarto>) Practice what you’ve learned by creating a brief markdown CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bullet list of job responsibilities, or relevant classes. Highlight the years in bold.
 
 *CV here*
+
+## Problem 5 - Errors
+
+The code block below has an error in it. Change the settings of the code block to print the error and continue running the second code block, which doesn't have an error.
+
+```{r}
+print("Hello world)
+```
+
+```{r}
+print("Hello world")
+```
