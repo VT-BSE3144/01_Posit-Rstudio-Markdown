@@ -25,7 +25,7 @@ Find an introduction to Rmarkdown or Quarto that resonates with you somewhere on
 
 What do you like about this introductory material?
 
-## Problem 3
+## Problem 3 - Examples
 
 Find an example of a cool-to-you website that was made with RMarkdown or Quarto (not one I showed you in class). Paste the URL link below. 
 
@@ -35,9 +35,9 @@ What do you think is cool about this website? What do you like about how it is f
  
 *answer here, including screenshot*
 
-## Problem 4 - CV
+## Problem 4 - Resume/CV
 
-(Adapted from <https://r4ds.hadley.nz/quarto>) Practice what you’ve learned by creating a brief markdown CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bullet list of job responsibilities, or relevant classes. Highlight the years in bold.
+(Adapted from <https://r4ds.hadley.nz/quarto>) Practice what you’ve learned by creating a brief markdown resume (or *Curriculum Vitae*, CV). The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bullet list of job responsibilities, or relevant classes. Highlight the years in bold.
 
 *CV here*
 
