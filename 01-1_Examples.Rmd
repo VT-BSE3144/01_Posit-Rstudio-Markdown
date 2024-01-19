@@ -1,0 +1,15 @@
+---
+title: "01-1_Examples"
+author: "Clay Wright"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Markdown examples
+
+We will look at a few examples and do some live demos here in class.
+

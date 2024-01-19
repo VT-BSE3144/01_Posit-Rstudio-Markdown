@@ -1,0 +1,42 @@
+---
+title: "01-2_Problem-Set"
+author: 
+date: '`r Sys.Date()`'
+output: pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Complete the following, replacing the *italic* text. Knit this document to a pdf, **double check the pdf document for errors**, and submit this to the Week 01 Problem Set assignment on Canvas. 
+
+## Problem 1 - Help
+
+Choose any function (type in your favorite letter and press `tab` to complete the function name) and open its documentation in the **Help** pane. What function did you choose? 
+*answer here*
+
+Copy the **Usage** section of your chosen function into a code chunk below.  
+*answer here*
+
+## Problem 2 - Markdown intros
+
+Find an introduction to Rmarkdown or Quarto that resonates with you somewhere on the internet. 
+
+What do you like about this introductory material?
+
+## Problem 3
+
+Find an example of a cool-to-you website that was made with RMarkdown or Quarto (not one I showed you in class). Paste the URL link below. 
+
+*<link>*
+
+What do you think is cool about this website? What do you like about how it is formatted? Insert a screenshot of something you like about the website into this document. 
+ 
+*answer here, including screenshot*
+
+## Problem 4 - CV
+
+(Adapted from <https://r4ds.hadley.nz/quarto>) Practice what you’ve learned by creating a brief markdown CV. The title should be your name, and you should include headings for (at least) education or employment. Each of the sections should include a bullet list of job responsibilities, or relevant classes. Highlight the years in bold.
+
+*CV here*
