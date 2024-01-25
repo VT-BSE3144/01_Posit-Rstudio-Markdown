@@ -19,7 +19,7 @@ Remember our goals are to:
 
 ### Making new documents
 
-### Opening and navigating the file pane
+### Navigating the file pane and file paths
 
 ### Console pane
 

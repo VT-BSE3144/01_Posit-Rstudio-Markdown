@@ -2,7 +2,9 @@
 title: "01-0 Introduction to Posit, Rstudio, & Markdown"
 author: "Clay Wright"
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -34,7 +36,7 @@ You will see several panes within the RStudio window.
 
 ### The Source pane
 
-If a file is open, in the top left of the screen perhaps this one, you will see the **Source** pane. (If you don't see this pane, create a new file by pressing `shift + command(or ctrl) + N`, or click the universal 'New Document' icon and select 'R script'). **Source** shows the files with which you are currently working. This is where you will spend most of your time building and testing lines of code and then combining them to make scripts for data analysis. In general you should be doing most all of your typing into the source pane to build a document that you can use to reproduce your analysis. 
+If a file is open, in the top left of the screen perhaps this one, you will see the **Source** pane. (If you don't see this pane, create a new file by pressing `shift + command(or ctrl) + N`, or click the universal 'New Document' icon ![](images/Screenshot 2024-01-18 at 11.57.01 PM.png) and select 'R script'). **Source** shows the files with which you are currently working. This is where you will spend most of your time building and testing lines of code and then combining them to make scripts for data analysis. In general you should be doing most all of your typing into the source pane to build a document that you can use to reproduce your analysis. 
 
 In this class we will be mostly working in markdown documents in the source pane. 
 
@@ -70,7 +72,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ***
 
-This provides a concise introduction to markdown and its power. Through simple text symbols your can format text to be headings (with #'s), make text **bold**, denote what is `code`, and offset code chunks with three backticks (the key next to 1) and curly braces indicating the programming language and maybe even naming or changing some settings with how the code should be run and output.  
+This provides a concise introduction to markdown and its power. Through simple text symbols your can format text to be headings (with #'s), make text **bold**, denote what is `code`, and offset code chunks with three backticks (the key next to 1 on your keyboard) and curly braces indicating the programming language. Code chunks (or blocks) also allow you to name them and changing some settings with how the code should be run and output.  
 
 **Note how the above and all of this document (in its markdown format) has empty lines between text elements. This makes sure that particularly headings and sections, like numbered/bullet lists, are formatted correctly.**
 
@@ -80,7 +82,15 @@ There are lots of cool things you can do with markdown. Check out the resources 
 
 You can also click "Visual" next to "Source" up at the top of this file to use a more traditional rich text format editor using mouse clicks to format your text. I have found this function is still a little glitchy and you especially need to be careful pasting text into the Visual editor.
 
-There are some things the visual editor does make easier like inserting images and citations and formatting tables.
+There are some things the visual editor does make easier like inserting images and citations and formatting tables. As you'll see below with the code chunk settings in [Code chunk/block settings and global settings](#code-chunkblock-settings-and-global-settings) below. 
+
+Links and images are particularly useful for documents. You can link to any website you simply sandwich the text you want to be linked in square brackets, followed by parentheses containing the link/web-address/URL (uniform resource locator). Links can also be to sections (defined by headings in your document) as you see above (figuring out how the names change can be tricky though, I had to look in the knitted html file for the section above). 
+
+Images are similar but the link is the alt-text or caption text, and the link is a link or path to the image. The image can be somewhere in your project folder or anywhere on the internet. So for example we could use the code`![This is a screenshot highlighting the path to this screenshot](images/Screenshot 2024-01-24 at 9.54.34 PM.png)` to insert this screenshot which is in this projects images folder: 
+
+![This is a screenshot highlighting the path to this screenshot](images/Screenshot 2024-01-24 at 9.54.34 PM.png)
+
+For all file paths that you use in a markdown document the path is relative to the markdown document. So this Rmd  is in the 01_Posit-Rstudio-Markdown folder and we only need to specify that, relative to this file, the screenshot above is in the images folder/directory and then we also need to specify the file name of the image.  
 
 ### Running code
 
@@ -201,7 +211,7 @@ We could also make this into a docx or slides, but slides work a little differen
 **In general this works quite well. But the YAML header is often a source of hard to track down errors. These errors can often be solved by replacing the header with the header from an RStudio template document.** 
 
 
-### Code chunk/block settings and global settings
+### Code chunk/block settings and global settings 
 
 Code chunk or block settings, which set how a code block will be run or formatted is one area in which R Markdown and Quarto differ.
 
