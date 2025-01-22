@@ -15,6 +15,16 @@ This week our goals are to be able to:
 - Articulate the process of using RStudio to develop markdown documents.
 - Practice using markdown to format reproducible documents
 
+## Pre-work
+
+- Read https://posit.cloud/learn/guide to learn a little bit about the Posit cloud space
+- To get a quick intro to the Rstudio user interface
+  - watch this [YouTube Video](https://youtu.be/FIrsOBy5k58?feature=shared&t=27),  
+  - [or this one](https://www.youtube.com/watch?v=yWsG3pGbfkM) which is a little longer and provides some more motivation,
+  - or check out the [Posit/Rstudio User Guide](https://docs.posit.co/ide/user/ide/guide/ui/ui-panes.html) (if you prefer reading to videos).
+- Check out the Posit/RStudio [Introduction to Rmarkdown](Links to an external site) and [Quarto]()
+- Peruse the material below and complete week 1 concept check (in Canvas)
+- Open the 01-2_Problem-Set.Rmd file from the files pane in the lower right and be ready to work through these materials on Monday.
 
 ## Posit
 

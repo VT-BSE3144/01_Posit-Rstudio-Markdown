@@ -43,7 +43,7 @@ What do you think is cool about this website? What do you like about how it is f
 
 ## Problem 5 - Errors
 
-The code block below has an error in it. Change the settings of the code block to print the error and continue running the second code block, which doesn't have an error.
+The first code block below has an error in it. Change the settings of the code block to print the error and continue running the second code block, which doesn't have an error.
 
 ```{r}
 print("Hello world)
