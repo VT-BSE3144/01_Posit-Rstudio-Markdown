@@ -2,7 +2,7 @@
 title: "01-0 Introduction to Posit, Rstudio, & Markdown"
 author: "Clay Wright"
 date: "`r Sys.Date()`"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +19,7 @@ This week our goals are to be able to:
 
 - Read https://posit.cloud/learn/guide to learn a little bit about the Posit cloud space
 - To get a quick intro to the Rstudio user interface
-  - watch this [YouTube Video](https://youtu.be/FIrsOBy5k58?feature=shared&t=27),  
+  - watch this [YouTube Video](https://youtu.be/FIrsOBy5k58?feature=shared&t=27), 
   - [or this one](https://www.youtube.com/watch?v=yWsG3pGbfkM) which is a little longer and provides some more motivation,
   - or check out the [Posit/Rstudio User Guide](https://docs.posit.co/ide/user/ide/guide/ui/ui-panes.html) (if you prefer reading to videos).
 - Check out the Posit/RStudio [Introduction to Rmarkdown](Links to an external site) and [Quarto]()
