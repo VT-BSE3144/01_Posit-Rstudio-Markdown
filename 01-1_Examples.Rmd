@@ -1,7 +1,4 @@
 ---
-title: "01-1_Examples"
-author: "Clay Wright"
-date: "`r Sys.Date()`"
 output: html_document
 ---
 

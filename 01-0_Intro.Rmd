@@ -1,11 +1,9 @@
 ---
-title: "01-0 Introduction to Posit, Rstudio, & Markdown"
-author: "Clay Wright"
-date: "`r Sys.Date()`"
 output:
   html_document:
     df_print: paged
 ---
+# Introduction to Posit, Rstudio, & Markdown
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
