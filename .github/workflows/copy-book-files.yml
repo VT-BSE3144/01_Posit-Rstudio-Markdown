@@ -4,7 +4,7 @@ name: Copy updated Intro and Example files to bookdown repo
 on: 
   push:
     branches: 
-      - master
+      - main
     paths:
       - '[0-9]+-[0-1]_**.*md'
 
