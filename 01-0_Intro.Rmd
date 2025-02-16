@@ -329,7 +329,7 @@ See the [Knitr options documentation](https://yihui.org/knitr/options/) for addi
 
 ### Troubleshooting Knit/Render problems
 
-Knitting or Rendering markdown documents can lead to lots of tough to identify error messages. It is many of the questions we recieve. Especially right befor assignments are due.
+Knitting or Rendering markdown documents can lead to lots of tough to identify error messages. It is many of the questions we recieve. Especially right before assignments are due.
 
 Here is a great write-up of common markdown problems: <https://rmd4sci.njtierney.com/common-problems-with-rmarkdown-and-some-solutions>. 
 
