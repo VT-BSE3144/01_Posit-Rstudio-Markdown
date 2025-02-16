@@ -4,7 +4,7 @@ name: Copy updated Intro and Example files to bookdown repo
 on: 
   push:
     branches: 
-      - main
+      - master
     paths:
       - '[0-9]+-[0-1]_**.*md'
 
@@ -31,4 +31,4 @@ jobs:
     - name: Push to bookdown repo
       run: bash ./.github/scripts/push-materials-to-bookdown.sh
       env:
-        BRANCH: master
+        BRANCH: main

@@ -7,11 +7,12 @@ function l { # Log a message to the terminal.
     echo -e "[$SCRIPT_NAME] ${1:-}"
 }
 
-# move to the bookdown repo
+# move to the root the notehub-js repo
 cd "./bookdown"
 echo "Open root of bookdown repo"
 
-# check if there's already a currently existing feature branch in the bookdown repo
+# check if there's already a currently existing feature branch in notehub-js for this branch
+# i.e. the altered openapi.yaml file's already been copied there at least once before
 echo "Check if feature branch $BRANCH already exists in bookdown"
 git ls-remote --exit-code --heads origin $BRANCH >/dev/null 2>&1
 EXIT_CODE=$?
@@ -20,16 +21,16 @@ echo "EXIT CODE $EXIT_CODE"
 if [[ $EXIT_CODE == "0" ]]; then
   echo "Git branch '$BRANCH' exists in the remote repository"
   # fetch branches from bookdown
-  git fetch
+  git pull
   # stash currently copied files
-  git stash
+  git stash --include-untracked
   # check out existing branch from bookdown
-  git checkout -f -b $BRANCH 
+  git checkout $BRANCH 
   # overwrite any previous file changes with current ones
-  git stash pop
+  git checkout stash -- .
 else
   echo "Git branch '$BRANCH' does not exist in the remote repository"
-  # create a new branch in bookdown
+  # create a new branch in notehub-js 
   git checkout -b $BRANCH
 fi
 
@@ -37,6 +38,6 @@ git add -A .
 git config user.name github-actions
 git config user.email github-actions@github.com
 git commit -am "feat: Update weekly materials files replicated from weekly repo"
-git push --set-upstream -f origin $BRANCH
+git push --set-upstream origin $BRANCH
 
 echo "Updated files successfully pushed to bookdown repo"
