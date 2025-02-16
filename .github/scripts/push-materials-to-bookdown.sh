@@ -21,7 +21,6 @@ if [[ $EXIT_CODE == "0" ]]; then
   echo "Git branch '$BRANCH' exists in the remote repository"
   # fetch branches from bookdown
   git fetch
-  git pull
   # stash currently copied files
   git stash
   # check out existing branch from bookdown
@@ -38,6 +37,6 @@ git add -A .
 git config user.name github-actions
 git config user.email github-actions@github.com
 git commit -am "feat: Update weekly materials files replicated from weekly repo"
-git push --set-upstream origin $BRANCH
+git push --set-upstream -f origin $BRANCH
 
 echo "Updated files successfully pushed to bookdown repo"

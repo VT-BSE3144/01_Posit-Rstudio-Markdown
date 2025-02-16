@@ -3,7 +3,7 @@ output:
   html_document:
     df_print: paged
 params:
-  version: 1.1
+  version: 1.2
 ---
 # Introduction to Posit, Rstudio, & Markdown
 
