@@ -21,6 +21,7 @@ if [[ $EXIT_CODE == "0" ]]; then
   echo "Git branch '$BRANCH' exists in the remote repository"
   # fetch branches from bookdown
   git fetch
+  git pull
   # stash currently copied files
   git stash
   # check out existing branch from bookdown
