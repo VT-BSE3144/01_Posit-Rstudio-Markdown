@@ -26,7 +26,7 @@ if [[ $EXIT_CODE == "0" ]]; then
   # check out existing branch from bookdown
   git checkout -f -b $BRANCH 
   # overwrite any previous file changes with current ones
-  git checkout stash -- .
+  git stash pop
 else
   echo "Git branch '$BRANCH' does not exist in the remote repository"
   # create a new branch in bookdown
